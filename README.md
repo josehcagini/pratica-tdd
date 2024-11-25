@@ -35,9 +35,9 @@ Desenvolvido com TypeScript e Jest em NodeJs@20.13.1
 1. Casos de testes desenvolvidos no ./src/service/calculateInvoice.test.ts
 2. Função desenvolvida na ./src/service/calculateInvoice.ts
 3. As etapas de desenvolvimento foram documentadas pelos commits do projeto
-  1. Configurado o ambiente de desenvolvimento
-  2. Desenvolvido os testes de todas as possíveis situações para a função calculateInvoice
-  3. Desenvolvido a função em si calculateInvoice 
-  4. Executado os testes para ver se a implementação passava em todos os testes escritos
+  3.1. Configurado o ambiente de desenvolvimento
+  3.2. Desenvolvido os testes de todas as possíveis situações para a função calculateInvoice
+  3.3. Desenvolvido a função em si calculateInvoice 
+  3.4. Executado os testes para ver se a implementação passava em todos os testes escritos
 
 ![image](https://github.com/user-attachments/assets/f4dd74d7-f8e5-44cc-912b-38aaaac5deae)
