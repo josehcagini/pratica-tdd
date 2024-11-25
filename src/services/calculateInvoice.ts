@@ -1,8 +1,4 @@
-type Product = {
-  name: string;
-  price: number;
-  quantity: number;
-};
+import { Product } from '../types/product';
 
 export default function calculateInvoice(
   products: Array<Product>,
