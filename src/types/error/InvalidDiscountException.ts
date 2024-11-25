@@ -1,6 +1,6 @@
 export default class InvalidDiscountException extends Error {
-  constructor(message: string) {
-    super(message);
+  constructor() {
+    super('Discount must be between 0 and 100');
     this.name = 'InvalidDiscountException';
   }
 }

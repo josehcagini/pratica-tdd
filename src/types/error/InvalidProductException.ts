@@ -1,6 +1,6 @@
 export default class InvalidProductException extends Error {
-  constructor(message: string) {
-    super(message);
+  constructor(productName: string) {
+    super(`Product ${productName} has an invalid price or quantity`);
     this.name = 'InvalidProductException';
   }
 }
