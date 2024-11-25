@@ -1,8 +1,11 @@
 import { Product } from '../types/product';
 
-import InvalidDiscountException from '../types/error/invalidDiscountException';
+import InvalidDiscountException from '../types/error/InvalidDiscountException';
 import InvalidProductException from '../types/error/InvalidProductException';
 
+/**
+ * @throws{InvalidDiscountException | InvalidProductException}
+ */
 export default function calculateInvoice(
   products: Array<Product>,
   discount: number,

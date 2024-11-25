@@ -1,4 +1,4 @@
-import InvalidDiscountException from '../types/error/invalidDiscountException';
+import InvalidDiscountException from '../types/error/InvalidDiscountException';
 import InvalidProductException from '../types/error/InvalidProductException';
 import { Product } from '../types/product';
 import calculateInvoice from './calculateInvoice';
@@ -91,32 +91,28 @@ describe('calculateInvoice', () => {
     const negativeDiscount = -10;
     const surpassDiscount = 110;
 
-    const expectedValue = InvalidDiscountException;
+    expect(() => {
+      calculateInvoice(mockedValidProductList, negativeDiscount);
+    }).toThrow(InvalidDiscountException);
 
-    expect(calculateInvoice(mockedValidProductList, negativeDiscount)).toThrow(
-      expectedValue,
-    );
-
-    expect(calculateInvoice(mockedValidProductList, surpassDiscount)).toThrow(
-      expectedValue,
-    );
+    expect(() => {
+      calculateInvoice(mockedValidProductList, surpassDiscount);
+    }).toThrow(InvalidDiscountException);
   });
 
   it('5 - dado uma lista de produtos com preço menor igual a zero e um dado desconto, deve retornar um erro de InvalidProductException', () => {
     const discount = 10;
-    const expectedValue = InvalidProductException;
 
-    expect(calculateInvoice(mockedInvalidPriceProductList, discount)).toThrow(
-      expectedValue,
-    );
+    expect(() => {
+      calculateInvoice(mockedInvalidPriceProductList, discount);
+    }).toThrow(InvalidProductException);
   });
 
   it('6 - dado uma lista de produtos com quantidade menor igual a zero e um dado desconto, deve retornar um erro de InvalidProductException', () => {
     const discount = 10;
-    const expectedValue = InvalidProductException;
 
-    expect(
-      calculateInvoice(mockedInvalidQuantityProductList, discount),
-    ).toThrow(expectedValue);
+    expect(() => {
+      calculateInvoice(mockedInvalidQuantityProductList, discount);
+    }).toThrow(InvalidProductException);
   });
 });
